@@ -9,6 +9,10 @@ import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import NoMatch from "./pages/NoMatch";
 
+import './assets/css/index.css';
+// import { myScript } from './assets/js/script.js';
+
+
 
 
 export default function App() {

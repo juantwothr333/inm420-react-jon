@@ -1,13 +1,242 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Mobile first styles */
+
+@import url('https://fonts.cdnfonts.com/css/fraset');
+@import url('https://fonts.cdnfonts.com/css/plateia');
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  background-image: linear-gradient(to top, #c4c5c7 0%, #dcdddf 52%, #ebebeb 100%);
 }
+header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  height: 50px; /* Set the height of the logo container */
+  justify-content: center;
+}
+
+.logo img {
+  max-height: 100%;
+  max-width: 100%; /* Ensure the logo image scales within the container */
+}
+
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin: 10px 0;
+  font-family: "fraset";
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Mobile First Styles */
+
+.hero-image {
+  height: auto;
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  max-width: 100%;
+  padding: 0 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.col-12 {
+  flex-basis: 100%;
+  padding: 0 15px;
+  text-align: center;
+}
+
+.col-md-6-desktop{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-family: 'plateia';
+}
+h2{
+  font-family: 'fraset';
+}
+
+p{
+  font-family: 'helvetica';
+}
+
+.homeH3{
+  text-align: center;
+}
+h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  font-family: 'fraset';
+  letter-spacing: 9px;
+}
+
+button {
+  background-color: #000;
+  color: #fff;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+
+/* .menu-toggle {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  position: relative;
+}
+
+.menu-toggle .icon-bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  border-radius: 1px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s ease-in-out;
+}
+
+.menu-toggle .icon-bar:first-child {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.menu-toggle .icon-bar:last-child {
+  transform: translate(-50%, -50%) rotate(-45deg);
+} */
+
+
+
+
+/* Media query for screens larger than 600px */
+@media (min-width: 600px) {
+  header {
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 50%; /* Set the width of the logo container to 50% */
+  }
+  
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%; /* Set the width of the navigation container to 50% */
+  }
+  
+  ul {
+    flex-direction: row;
+    margin: 0;
+  }
+  
+  li {
+    margin: 0 10px;
+  }
+  
+  
+}
+/* Desktop */
+@media (min-width: 768px) {
+
+  .container{
+    padding: 0 50px;
+  }
+  .logo{
+    justify-content: flex-start;
+  }
+  .hero-image {
+    height: 100vh;
+  }
+  
+  .col-md-6 {
+    flex-basis: 40%;
+    padding: 0 35px;
+    text-align: left;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  h3{
+    font-size: 15px;
+  }
+  p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  button {
+    padding: 1rem 2rem;
+    font-size: 15px;
+    cursor: pointer;
+  }
+
+  .homeH3{
+    text-align: center;
+  }
+
+  .col-md-6-desktop{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  
+  }
+}
+
+
+
+
+
